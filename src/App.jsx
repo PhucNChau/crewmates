@@ -1,29 +1,17 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import './App.css';
 
 function App() {
-  
-  let router = createBrowserRouter([
-    {
-      path: "/",
-      // element: 
-    },
-    {
-      path: "/create",
-      // element: 
-    },
-    {
-      path: "/edit/:id",
-      // element: 
-    },
-    {
-      path: "/gallery",
-      // element: 
-    },
-  ]);
 
   return (
-    <RouterProvider router={router} />
+    <div className="app">
+      <nav className="sidebar">
+        <Link to="/">Home</Link>
+        <Link to="/create">Create a Crewmate</Link>
+        <Link to="/gallery">Crewmate Gallery</Link>
+      </nav>
+      <Outlet />
+    </div>
   );
 };
 
