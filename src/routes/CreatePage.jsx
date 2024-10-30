@@ -1,6 +1,6 @@
 
 
-function CreatePage() {
+const CreatePage = () => {
 
   return (
     <div className="create-page">

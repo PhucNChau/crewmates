@@ -1,6 +1,6 @@
 
 
-function EditPage() {
+const EditPage = () => {
 
   return (
     <div className="edit-page">
