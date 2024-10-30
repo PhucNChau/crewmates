@@ -10,7 +10,9 @@ function App() {
         <Link to="/create">Create a Crewmate</Link>
         <Link to="/gallery">Crewmate Gallery</Link>
       </nav>
-      <Outlet />
+      <div className="outlet-container">
+        <Outlet />
+      </div>
     </div>
   );
 };

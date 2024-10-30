@@ -6,6 +6,10 @@ import {
 } from 'react-router-dom';
 import './index.css';
 import App from './App.jsx';
+import HomePage from './routes/HomePage.jsx';
+import CreatePage from './routes/CreatePage.jsx';
+import EditPage from './routes/EditPage.jsx';
+import GalleryPage from './routes/GalleryPage.jsx';
 
 let router = createBrowserRouter([
   {
@@ -14,19 +18,19 @@ let router = createBrowserRouter([
     children: [
       {
         index: true,
-        // element:
+        element: <HomePage />
       },
       {
         path: "/create",
-        // element: 
+        element: <CreatePage />
       },
       {
         path: "/edit/:id",
-        // element: 
+        element: <EditPage />
       },
       {
         path: "/gallery",
-        // element: 
+        element: <GalleryPage />
       },
     ],
   },
