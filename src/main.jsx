@@ -10,6 +10,7 @@ import HomePage from './routes/HomePage.jsx';
 import CreatePage from './routes/CreatePage.jsx';
 import EditPage from './routes/EditPage.jsx';
 import GalleryPage from './routes/GalleryPage.jsx';
+import DetailPage from './routes/DetailPage.jsx';
 
 let router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ let router = createBrowserRouter([
       {
         path: "/gallery",
         element: <GalleryPage />
+      },
+      {
+        path: "/:id",
+        element: <DetailPage />
       },
     ],
   },

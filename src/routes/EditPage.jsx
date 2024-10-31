@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 
 
 const EditPage = () => {
+  const params = useParams();
   const [inputs, setInputs] = useState({
     'name': '',
     'speed': '',

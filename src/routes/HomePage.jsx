@@ -1,6 +1,6 @@
 
 
-function HomePage() {
+const HomePage = () => {
 
   return (
     <div className="home-page">

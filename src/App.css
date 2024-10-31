@@ -67,16 +67,75 @@ li {
 .input-container {
   display: flex;
   flex-direction: column;
-  background-color: beige;
+  background-color: darkgray;
   padding: 1em 2em 2em 2em;
   border-radius: 10px;
 }
 
 .input-container li {
   font-size: 1.1em;
+  color: white;
 }
 
 .delete-button {
   margin-left: 20px;
 }
 
+.gallery-page img {
+  width: 100px;
+}
+
+.crewmates-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1em 3em;
+  row-gap: 3em;
+  column-gap: 4em;
+}
+
+.crewmate-card {
+  background-color: darkgray;
+  padding: 2em;
+  border-radius: 10px;
+}
+
+.crewmate-card p {
+  font-size: 1.15em;
+  font-weight: 500;
+  color: white;
+}
+.crewmate-card span {
+  background-color: white;
+  padding: 2px 5px;
+  border-radius: 5px;
+  color: darkgrey;
+}
+.crewmate-card#Green {
+  box-shadow: 10px -10px 15px #38be314d;
+}
+.crewmate-card#Purple {
+  box-shadow: 10px -10px 15px #6443b79c;
+}
+.crewmate-card#Blue {
+  box-shadow: 10px -10px 15px #201ba84d;
+}
+.crewmate-card#Rainbow {
+  box-shadow: 7px -5px 10px #4c0082b6, 11px -9px 10px #0000ff71, 16px -14px 10px #00ff007d, 20px -17px 10px #ffff0093, 24px -19px 10px #ff8000d7, 27px -23px 10px #eb1818af, 5px 5px 15px 5px #0000;
+}
+.crewmate-card#Yellow {
+  box-shadow: 10px -10px 15px #c7ba274d;
+}
+.crewmate-card#Red {
+  box-shadow: 10px -10px 15px #be2a2a4d;
+}
+.crewmate-card#Orange {
+  box-shadow: 10px -10px 15px #fa751685;
+}
+.crewmate-card#Pink {
+  box-shadow: 10px -10px 15px #b82bac81;
+}
+
+
+.detail-page img {
+  width: 150px;
+}

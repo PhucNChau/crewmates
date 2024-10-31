@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { supabase } from "../client";
 
 
 const CreatePage = () => {
@@ -15,7 +16,26 @@ const CreatePage = () => {
       ...prevState,
       [e.target.name]: e.target.value
     }))
-  }
+  };
+
+  const createCrewmate = async (e) => {
+    e.preventDefault();
+
+    var inputSpeed = isNaN(parseFloat(inputs["speed"])) ? 0.0 : parseFloat(inputs["speed"])
+    var inputColor = inputs["color"] === "" ? "White" : inputs["color"]
+
+    await supabase
+      .from('crewmates')
+      .insert({name: inputs["name"], speed: inputSpeed, color: inputColor});
+
+    setInputs({
+      'name': '',
+      'speed': '',
+      'color': ''
+    });
+
+    alert("Crewmate is created successfully!");
+  };
 
   return (
     <div className="create-page">
@@ -24,11 +44,11 @@ const CreatePage = () => {
       <form className="form-container">
         <div className="input-container">
           <label htmlFor="name"><h2>Name:</h2></label>
-          <input type="text" name="name" id="name" placeholder="Enter crewmate's name" onChange={handleChange} />
+          <input type="text" name="name" id="name" placeholder="Enter crewmate's name" onChange={handleChange} value={inputs["name"]} />
         </div>
         <div className="input-container">
           <label htmlFor="speed"><h2>Speed (mph):</h2></label>
-          <input type="text" name="speed" id="speed" placeholder="Enter speed in mph" onChange={handleChange} />
+          <input type="text" name="speed" id="speed" placeholder="Enter speed in mph" onChange={handleChange} value={inputs["speed"]} />
         </div>
         <div className="input-container">
           <label><h2>Color:</h2></label>
@@ -48,7 +68,7 @@ const CreatePage = () => {
           }
         </div>
       </form>
-      <button type="submit">Create Crewmate</button>
+      <button type="submit" onClick={createCrewmate}>Create Crewmate</button>
     </div>
   );
 };
