@@ -13,7 +13,6 @@ const CrewmateCard = ({name, speed, color, id}) => {
       <p>Name of Crewmate: <span>{name}</span></p>
       <p>Speed of Crewmate: <span>{speed} mph</span></p>
       <p>Color of Crewmate: <span>{color}</span></p>
-      {/* <Link to={`edit/${id}`}>Edit Crewmate</Link> */}
       <button type="button" onClick={editItem}>Edit Crewmate</button>
     </div>
   );

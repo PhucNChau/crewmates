@@ -68,7 +68,7 @@ li {
   display: flex;
   flex-direction: column;
   background-color: darkgray;
-  padding: 1em 2em 2em 2em;
+  padding: 0em 2em 2em 2em;
   border-radius: 10px;
 }
 
@@ -135,7 +135,10 @@ li {
   box-shadow: 10px -10px 15px #b82bac81;
 }
 
-
 .detail-page img {
   width: 150px;
+}
+
+.edit-page {
+  padding-bottom: 2em;
 }

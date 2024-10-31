@@ -22,7 +22,7 @@ const DetailPage = () => {
   const navigate = useNavigate();
   const editCrewmate = () => {
     navigate(`/edit/${params.id}`, {replace: true});
-  }
+  };
 
   return (
     <div className="detail-page">
