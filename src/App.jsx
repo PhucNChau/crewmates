@@ -5,11 +5,13 @@ function App() {
 
   return (
     <div className="app">
-      <nav className="sidebar">
-        <Link to="/">Home</Link>
-        <Link to="/create">Create a Crewmate</Link>
-        <Link to="/gallery">Crewmate Gallery</Link>
-      </nav>
+      <div className="sidebar">
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/create">Create a Crewmate</Link>
+          <Link to="/gallery">Crewmate Gallery</Link>
+        </nav>
+      </div>
       <div className="outlet-container">
         <Outlet />
       </div>
