@@ -23,18 +23,20 @@ const GalleryPage = () => {
   return (
     <div className="gallery-page">
       <h1>Your Crewmate Gallery!</h1>
-      <div className="crewmates-container">
+      <div>
         {crewmates && crewmates.length > 0 ?
-          crewmates.map((item) => (
-            <CrewmateCard 
-              key={item.id}
-              name={item.name}
-              speed={item.speed}
-              color={item.color}
-              id={item.id}
-            />
-          )) :
-          <div>
+          <div className="crewmates-container">
+            {crewmates.map((item) => (
+              <CrewmateCard 
+                key={item.id}
+                name={item.name}
+                speed={item.speed}
+                color={item.color}
+                id={item.id}
+              />
+            ))}
+          </div> :
+          <div className="empty-container">
             <h3>You haven't made  a crewmate yet!</h3>
             <Link to="/create">Create one here!</Link>
           </div>

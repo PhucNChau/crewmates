@@ -88,7 +88,7 @@ li {
 .crewmates-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 1em 3em;
+  padding: 1em 10%;
   row-gap: 3em;
   column-gap: 4em;
 }
@@ -97,6 +97,7 @@ li {
   background-color: darkgray;
   padding: 2em;
   border-radius: 10px;
+  max-width: 300px;
 }
 
 .crewmate-card p {
